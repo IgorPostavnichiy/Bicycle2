@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+  font: 400 16px/1.5 Lato, Arial, Tahoma, sans-serif;
+  color: #848789;
+}
+
+a {
+ 	text-decoration: none;
+ 	color: #f00;
+ }
+
+ ul {
+ 	list-style: none;
+ }
+
+ 
+input {
+	 outline: none;
+ }
+ 
+/*
+img {
+	 max-width: 100%;
+	 height: auto;
+ }
+ */
+
+ 
+table {
+	 border-collapse: collapse ;
+	 }
+
+table, th, td { 
+	 border: 1px solid black;
+ }
+ 
+
+.wrapper {
+	 overflow: hidden;
+ }
+
+
+ul li {
+    list-style-type: none;
+ }
+
+.container {
+	 max-width: 1600px;
+	 margin: 0 auto;
+	 }
+.header .banner img {
+	width: 100%;
+}
+
+.banner {
+	background: url("../images/banner.jpg") no-repeat 50% 0;
+	background-size: cover;
+}
+
+.header .container{
+	position: relative;
+}
+
+.header .banner {
+	min-height: 100vh;
+}
+
+.header .navigation {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 35px 15px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.navigation-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.navigation .menu {
+	display: flex;
+	align-items: center;
+}
+
+.navigation .left-navigation {
+	justify-content: flex-end;
+}
+
+.logo img {
+	width: 94px;
+	margin: 0 27px;
+}
+
+.logo {
+	flex-shrink: 0;
+}
+
+.navigation .menu {
+	width: calc(50% - 74px);
+	flex-grow: 1;
+} 
+
+.menu a {
+	color: #4d4959;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 5px 35px;
+	display: block;
+}
+
+.menu li {
+	position: relative;
+}
+
+.menu li + li:before {
+	content: ".";
+	position: absolute;
+	left: 0;
+	bottom: 5px;
+	color: #4d4959;
+}
+
+.logo-mobile, .menu-button, .close-menu {
+	display: none;
+}
+
+.close-menu {
+	width: 32px;
+	height: 32px;
+	background: url("../images/close.png") no-repeat 50% 50%;
+	background-size: 32px;
+	cursor: pointer;
+	position: absolute;
+	right: 20px;
+	top: 20px; 
+}
+
+.close-menu:hover {
+	transform: rotate(-90deg);
+}
+
+.menu-button {
+	cursor: pointer;
+}
+
+.menu-button img {
+	width: 32px;
+}
+
+.logo-mobile img {
+	width: 65px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.col-33 {
+	width: 33.3%;
+	flex-shrink: 0;
+}
+
+.col-50 {
+	width: 50%;
+	flex-shrink: 0;
+}
+
+.col-66 {
+	width: 66.7%;
+	flex-shrink: 0;
+}
+
+.col-100 {
+	width: 100%;
+}
+
+.col-100-img {
+	line-height: 0;
+	width: 100%;
+}
+
+.col-100-img img {
+	width: 100%;
+}
+
+.text-block p {
+	color: #848789;
+	line-height: 30px;
+	padding: 0 240px 130px 275px;
+	text-align: center;
+}
+
+.text-block img {
+		padding: 100px 0 0;
+		display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title-18 {
+	font-family: LatoBold;
+	font-weight: 200;
+	color: #353738;
+	font-size: 18 px;
+	text-align: center;
+	padding: 20px 0 20px;
+
+
+}
+
+.centered {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bg-image {
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+.col-text {
+	padding: 72px 66px 90px;
+	background: #fff;
+	text-align: center;
+}
+
+.col-text p {
+	color: #848789;
+	text-align: justify;
+	padding-bottom: 35px;
+	line-height: 30px; 
+}
+
+.col-text p:after {
+	content: "";
+	position: absolute;
+	border-bottom: 1px solid #000;
+}
+
+
+@media(max-width: 1024px) {
+
+	.logo-mobile, .menu-button, .close-menu {
+		display: block;
+	}
+
+	.navigation-wrapper .logo {
+		display: none;
+	}
+
+	.navigation-wrapper {
+		position: fixed;
+		height: 100vh;
+		overflow-y: auto;
+		padding: 80px 0 40px;
+		width: 320px;
+		background: #fff;
+		right: -110%;
+		top: 0;
+		display: block;
+		box-shadow: -2px 0 6px 1px rgba(50, 50, 50, .3);
+		transition: .5s;
+	}
+
+	.navigation-wrapper.active {
+		right: 0;
+	}
+	
+
+	.navigation-wrapper .menu {
+		display: block;
+		width: 100%;
+		text-align: right;
+	}
+
+	.navigation-wrapper .menu li:before {
+		display: none;
+	}
+
+	.navigation-wrapper .menu a {
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+
+	.header .navigation{
+		justify-content: space-between;
+		padding: 15px;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
