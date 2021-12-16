@@ -1,10 +1,23 @@
 $(document).ready(function () {
-	$('.menu-button').on( e: 'click', t: function () {
-		$('.navigation-wrapper').addClass( t: 'active');
-});
-
-	$('.close-menu').on( e: 'click', t: function () {
-		$('.navigation-wrapper').removeClass( t: 'active');
+	//Mobile menu
+	$('.menu-button').on('click', function() {
+		$('.navigation-wrapper').addClass('active');
+})
+	$('.close-menu').on('click', function() {
+		$('.navigation-wrapper').removeClass('active');
 		})
-});
+	
+	//Reviews slider
+
+	const reviewsSlider = new Swiper('.swiper-reviews', {
+		loop: true,
+		
+		pagination: {
+    		el: '.swiper-pagination',
+    		clickable: true
+  },
+
+   });
+
+})
 
